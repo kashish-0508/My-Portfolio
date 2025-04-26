@@ -1,0 +1,464 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: #f5f5f5;
+}
+/* Import a clean modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* NAVBAR CONTAINER */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* NAV BUTTONS */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.nav-buttons a:hover {
+  background: #ffffff;
+  color: #2c3e50;
+  border-color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .nav-buttons.show {
+    display: flex;
+  }
+
+  .nav-buttons a {
+    margin: 10px 0;
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Main Section */
+main {
+  padding: 3rem 1rem;
+  background: linear-gradient(#034764, #60a5bc, #2c5364); 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-section {
+  padding: 4rem 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #ede7e7, #f1d7d7);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+}
+
+.page-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-weight: 700;
+  text-align: center;
+}
+
+.page-section p {
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.important {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.important:hover {
+  background-color: #33eaea;
+}
+
+button {
+  background: linear-gradient(to right, #b84eff, #9333ea);
+  color: white;
+  padding: 0.8rem 1.4rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: linear-gradient(to right, #9333ea, #7e22ce);
+  transform: translateY(-2px);
+}
+
+ul {
+  padding-left: 2rem;
+  list-style-type: disc;
+  color: #374151;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+.resume-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.resume-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.resume-btn {
+  background: linear-gradient(to right, #b84eff, #9333ea);
+  color: white;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(147, 51, 234, 0.2);
+}
+
+.resume-btn:hover {
+  background: linear-gradient(to right, #9333ea, #7e22ce);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .resume-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .resume-btn {
+    padding: 0.8rem 1.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .page-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .page-section h2 {
+    font-size: 2rem;
+  }
+
+  .page-section p {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .important {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-section {
+    padding: 2rem 1rem;
+  }
+
+  .page-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .page-section p,
+  ul {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
+.about-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #ede7e7, #f1d7d7); /* same as .page-section */
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.125rem;
+  color: #2c3e50;
+  line-height: 1.8;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Decorative top bar */
+.about-section::before {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #b84eff;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+/* Hover effect like .page-section */
+.about-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2.5rem 1.5rem;
+    font-size: 1rem;
+    margin: 30px 15px;
+  }
+
+  .about-section::before {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* Contact Section Container */
+.contact-section {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background: linear-gradient(to right, #ede7e7, #f1d7d7);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Section Heading */
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+/* Inputs and Textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 1.5px solid #dcdcdc;
+  border-radius: 14px;
+  background-color: #fdfdfd;
+  transition: 0.3s ease;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.25);
+  outline: none;
+}
+
+/* Submit Button */
+.contact-form button {
+  padding: 14px 20px;
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(to right, #2980b9, #1f5fa1);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 25px 18px;
+    margin: 40px 15px;
+  }
+
+  .contact-section h2 {
+    font-size: 24px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 15px;
+  }
+
+  .contact-form button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 20px 14px;
+  }
+
+  .contact-section h2 {
+    font-size: 22px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+  }
+}
+

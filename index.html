@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kashish's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+</head>
+<body>
+  
+  <header>
+    <div class="navbar-container">
+      <div class="logo">My Portfolio</div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <div class="nav-buttons" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section id="home" class="page-section" data-aos="fade-up">
+      <h2><span id="typing-text"></span></h2>
+      <p>Welcome to my personal portfolio website.</p>
+    </section>
+
+    <section id="skills" class="page-section" data-aos="fade-right">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python, C++</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="page-section" data-aos="fade-up">
+      <h2>Projects</h2>
+      <p class="important">BLOCKCHAIN-BASED E-VOTING SYSTEM | 03/2023 - 05/2023</p>
+      <ul>
+        <li>Created and implemented the responsive frontend user interface of an e-voting system based on blockchain, providing seamless user experience for voters and administrators on various devices.</li>
+        <li>Integrated frontend with Ethereum smart contracts (Solidity) through Web3.js, providing secure, real-time ballot submission and result visualization.</li>
+        <li>Developed UI elements for voter registration, authentication, and real-time voting status with HTML, CSS, JavaScript, and Bootstrap, leading to a $200,000 year-over-year cost reduction by optimizing the voting process.</li>
+        <li>Worked in conjunction with backend engineers to provide clear cryptographic data integrity on the user interface, minimizing confusion and likely errors by 35%.</li>
+      </ul>
+
+      <p class="important">SMART PARKING MANAGEMENT SYSTEM | 01/2025-02/2025</p>
+      <ul>
+        <li>Created the entire frontend of a smart parking web dashboard with HTML, CSS, JavaScript, and Chart.js for visualizing real-time slot availability with 95% detection accuracy.</li>
+        <li>Incorporated real-time updates from Firebase to update parking slot statuses in real time (<1s latency) through dynamic DOM manipulation and event listeners. </li>
+        <li>Constructed a responsive and user-friendly interface for administrators and users to supervise more than 60 parking spaces with real-time visual feedback.</li>
+        <li>Worked with backend (Flask/OpenCV) group to develop API endpoints and provided smooth UI updates using AJAX/WebSocket-like methods, enhancing responsiveness by 40%.</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="page-section"  data-aos="fade-up">
+      <h2>Experience</h2>
+      <p class="important">Web Development Intern | CodSoft | 06/2023 - 07/2023</p>
+      <ul>
+        <li>Built dynamic and responsive web pages using HTML, CSS, and JavaScript.</li>
+        <li>Worked on live projects and collaborated with other developers.</li>
+      </ul>
+
+      <p class="important">AI and DQA Trainee | IIT Mandi iHub | 08/2023 - 09/2023</p>
+      <ul>
+        <li>Worked on data quality analysis and AI projects.</li>
+        <li>Gained hands-on experience in real-world data science problems.</li>
+      </ul>
+    </section>
+
+    <section id="certificates" class="page-section" data-aos="fade-up">
+      <h2>Certificates</h2>
+      <ul>
+        <li>Web Development - Internshala</li>
+        <li>AI and DQA Training - IIT Mandi iHub</li>
+        
+      </ul>
+    </section>
+
+    <section id="resume" class="page-section resume-section" data-aos="fade-up">
+      <h2>Resume</h2>
+      <div class="resume-buttons">
+      <p>Click to download or preview my resume:</p><br>
+      <a href="./resume/kashish resume 1(1).pdf" target="_blank" class="resume-btn preview-btn"> Preview Resume</a>
+      
+      </div>
+    </section>
+
+    <section id="social" class="page-section" data-aos="fade-up">
+      <h2>Social Links</h2>
+      <ul>
+        <li><a href="https://github.com/kashish">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/kashish">LinkedIn</a></li>
+        <li><a href="mailto:kashish@example.com">Email</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    // Typing animation
+    new Typed("#typing-text", {
+      strings: ["Welcome to My Portfolio", "I'm Kashish", "An Aspiring Web Developer"],
+      typeSpeed: 70,
+      backSpeed: 20,
+      loop: true
+    });
+
+    
+  </script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navMenu").classList.toggle("show");
+    }
+  </script>
+  <!-- AOS Animation Library JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration
+    once: true,     // only animate once per element
+  });
+</script>
+
+  
+
+</body>
+</html>
