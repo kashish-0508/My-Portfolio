@@ -18,23 +18,8 @@ window.addEventListener("scroll", () => {
   document.getElementById("scroll-progress").style.width = scrolled + "%";
 });
 
-// Theme toggle with memory
-const toggle = document.getElementById("theme-toggle");
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("light");
-  document.body.classList.toggle("dark");
-  localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark");
-});
 
-window.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-    document.body.classList.add("light");
-    document.body.classList.remove("dark");
-  } else {
-    document.body.classList.add("dark");
-  }
-});
+
 
 // Filter Projects
 function filterProjects(type) {

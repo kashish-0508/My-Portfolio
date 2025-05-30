@@ -14,9 +14,6 @@ body {
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-}
 
 /* HEADER */
 header {
@@ -42,6 +39,7 @@ header {
   font-weight: 600;
   color: #fff;
 }
+
 
 /* NAV BUTTONS */
 .nav-buttons {
