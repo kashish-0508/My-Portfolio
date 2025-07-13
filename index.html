@@ -1,144 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Kashish's Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- AOS Animation Library CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kashish's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
+
 <body>
-  
+  <div class="floating-shapes">
+  <span style="left:10%; animation-delay:0s;"></span>
+  <span style="left:30%; animation-delay:2s;"></span>
+  <span style="left:50%; animation-delay:4s;"></span>
+  <span style="left:70%; animation-delay:6s;"></span>
+  <span style="left:90%; animation-delay:8s;"></span>
+</div>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle" onclick="toggleTheme()">🌓</div>
+
+  <!-- Header -->
   <header>
     <div class="navbar-container">
-      <div class="logo">My Portfolio</div>
-      
+      <div class="logo">Kashish</div>
       <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <div class="nav-buttons" id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </header>
-  
+
+
   <main>
-    <section id="home" class="page-section" data-aos="fade-up">
+    <section id="home" class="page-section hero" data-aos="fade-up">
+      <div class="hero-image-container">
+  <img src="images/profile.jpg" alt="Kashish Bhardwaj" class="hero-image">
+</div>
       <h2><span id="typing-text"></span></h2>
-      <p>Welcome to my personal portfolio website.</p>
+      
+      <section class="about-section" id="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>
+    Hi! I'm <strong>Kashish Bhardwaj</strong>, a passionate and curious student pursuing a degree in Computer Science. 
+    I'm deeply interested in <strong>Data Science</strong>, <strong>Machine Learning</strong>, and <strong>Web Development</strong>, and I love solving real-world problems using code.
+  </p>
+  <p>
+    I've completed internships and built projects that helped me strengthen my skills in <strong>Python</strong>, <strong>Pandas</strong>, <strong>Machine Learning</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. 
+    Recently, I worked on exciting projects like a <em>Netflix clone</em> and a <em>Smart Parking System</em>.
+  </p>
+  <p>
+    I was also a trainee at IIT Mandi iHub and HCI Foundation where I was enhancing my AI and data quality assurance skills. 
+    I enjoyed learning new tools, building cool things, and always improving myself.
+  </p>
+  <p class="important">Let's connect and build something amazing together!</p>
+</section>
+
     </section>
 
     <section id="skills" class="page-section" data-aos="fade-right">
       <h2>Skills</h2>
       <ul>
-        <li><strong>Web  - </strong>Html, CSS, JavaScript</li>
-        <li> <strong>Languages-</strong>Python, java</li>
-        <li> <strong>Databases – </strong> MYSQL, SQLite</li>
-        <li> <strong>Tools – </strong> Power Bi, Git, Jupyter </li>
-        <li> <strong>Concepts- </strong> Machine Learning	</li>
-        <li> <strong>Soft Skills- </strong> Team Collaboration, Task Prioritization, Multitasking, Critical Thinking</li>
-        
+        <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
+        <li><strong>Languages:</strong> Python, Java</li>
+        <li><strong>Databases:</strong> MySQL, SQLite</li>
+        <li><strong>Tools:</strong> Power BI, Git, Jupyter</li>
+        <li><strong>Concepts:</strong> Machine Learning</li>
+        <li><strong>Soft Skills:</strong> Team Collaboration, Task Prioritization, Multitasking, Critical Thinking</li>
       </ul>
     </section>
 
     <section id="projects" class="page-section" data-aos="fade-up">
       <h2>Projects</h2>
-      <a href="https://github.com/kashish-0508/My-Portfolio" class="important">PERSONAL PORTFOLIO WEBSITE</a> 
-      <ul>
-        <li>Created and coded a 100% responsive one-page portfolio website in HTML, CSS, and JavaScript, showcasing 6+ projects, skills, and work experience.</li>
-        <li>Used dark/light theme switching, smooth navigation scroll, typing effect, and page transitions for a refined user experience.</li>
-        <li>Added interactive elements such as preview resume, contact form using EmailJS. Ensured performance and accessibility on devices, providing an optimal experience for desktop and mobile users.</li>
-      </ul>
+      <div class="project-cards">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>Fully responsive site with animations, resume preview, contact form, and dark/light mode.</p>
+          <a href="https://github.com/kashish-0508/My-Portfolio" target="_blank">View Project</a>
+        </div>
 
-      <a href="https://github.com/kashish-0508/Android-Malware-Detection-Using-Machine-Learning" class="important">Android Malware Detection System Using Machine Learning</a>
-      <ul>
-        <li>Trained a stacking ensemble model (Logistic Regression, Random Forest, SVM) achieving 84.2% accuracy and 96.93% recall for Android malware detection with minimized false negatives.</li>
-        <li>Engineered a multi-phase pipeline using permission and behavioral analysis with Gradient Boosting-based feature selection and custom thresholds for risk-level classification.</li>
-        <li>Deployed a scalable malware detection system on 30,000+ apps using probability-based classification and meta-learning for enhanced real-world threat robustness.</li>
-      </ul>
+        <div class="project-card">
+          <h3>Android Malware Detection</h3>
+          <p>Ensemble ML model for Android malware detection with advanced feature engineering.</p>
+          <a href="https://github.com/kashish-0508/Android-Malware-Detection-Using-Machine-Learning" target="_blank">View Project</a>
+        </div>
 
-      <a href="https://github.com/kashish-0508/facerecognition" class="important">FACE RECOGNITION ATTENDANCE SYSTEM</a>
-      <ul>
-        <li>Developed a real-time Flask-based Face Recognition Attendance System using OpenCV and NumPy, automating authentication and reducing manual effort by over 90%.</li>
-        <li>Styled and implemented 10+ scalable RESTful APIs for user registration, attendance tracking, analytics, and admin operations, enhancing system modularity and accessibility.</li>
-        <li>Built secure facial recognition pipelines with CSV export and analytics features, supporting 100+ users and delivering daily actionable attendance reports.</li>
-      </ul>
+        <div class="project-card">
+          <h3>Face Recognition Attendance System</h3>
+          <p>Automated attendance using Flask, OpenCV, and REST APIs with analytics export.</p>
+          <a href="https://github.com/kashish-0508/facerecognition" target="_blank">View Project</a>
+        </div>
+      </div>
     </section>
 
-    <section id="experience" class="page-section"  data-aos="fade-up">
+    <section id="experience" class="page-section timeline" data-aos="fade-up">
       <h2>Experience</h2>
-      <p class="important">Web Development Intern | Internshala | 07/2023 - 09/2023</p>
-      <ul>
-        <li>Created a full-stack Paying Guest (PG) accommodation search platform using React.js, JavaScript, PHP, and SQL, serving 500+ users and reducing search time by 30% with an intuitive interface.</li>
-        <li>Worked on live projects and collaborated with other developers.</li>
-      </ul>
-
-      <p class="important">AI and DQA Trainee | IIT Mandi iHub | 08/2024 - 09/2024</p>
-      <ul>
-        <li>Worked on data quality analysis and AI projects.</li>
-        <li>Optimized ML models by applying hyperparameter tuning and feature engineering, decreasing inference time by 30% while maintaining high accuracy.Designed automated testing scripts to improve data quality assessment, reducing manual review time by 40%.</li>
-      </ul>
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-date">Jul 2023 - Sep 2023</div>
+          <div class="timeline-content">
+            <h4>Web Development Intern</h4>
+            <p>Internshala</p>
+            <p>Developed PG platform using React, PHP, SQL, improving search UX for 500+ users.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Aug 2024 - Nov 2024</div>
+          <div class="timeline-content">
+            <h4>AI & DQA Trainee</h4>
+            <p>IIT Mandi iHub</p>
+            <p>Optimized ML pipelines, built auto QA tools reducing manual effort by 40%.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="certificates" class="page-section" data-aos="fade-up">
       <h2>Certificates</h2>
       <ul>
-        <li>Web Development - Internshala</li>
-        <li>AI and DQA Training - IIT Mandi iHub</li>
-        
+        <li><a href="./images/Web Development Training - Certificate of Completion.pdf" target="_blank">Web Development – Internshala</a></li>
+        <li>AI and DQA Training – IIT Mandi iHub</li>
       </ul>
     </section>
 
     <section id="resume" class="page-section resume-section" data-aos="fade-up">
       <h2>Resume</h2>
       <div class="resume-buttons">
-      <p>Click to download or preview my resume:</p><br>
-      <a href="./resume/resume2.pdf" target="_blank" class="resume-btn preview-btn"> Preview Resume</a>
-      
+        <p>Click to preview:</p>
+        <a href="./resume/kashish-resume.pdf" target="_blank" class="resume-btn preview-btn">Preview Resume</a>
       </div>
     </section>
 
-    <section id="social" class="page-section" data-aos="fade-up">
-      <h2>Social Links</h2>
-      <ul>
-        <li><a href="https://github.com/kashish">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/kashish">LinkedIn</a></li>
-        <li><a href="mailto:kashish@example.com">Email</a></li>
-      </ul>
-    </section>
+    <section id="contact" class="contact-section" data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <form id="contact-form" class="contact-form">
+    <div class="form-group">
+      <label for="user_name">Name</label>
+      <input type="text" id="user_name" name="user_name" required />
+    </div>
+    <div class="form-group">
+      <label for="user_email">Email</label>
+      <input type="email" id="user_email" name="user_email" required />
+    </div>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" required />
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="social-icons">
+    <a href="mailto:kashishbhardwaj215@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://github.com/kashish" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/kashish" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</section>
   </main>
 
+  <footer>
+    <p>&copy; 2025 Kashish Bhardwaj. All rights reserved.</p>
+  </footer>
+
   <script>
-    // Typing animation
     new Typed("#typing-text", {
-      strings: ["Welcome to My Portfolio", "I'm Kashish", "An Aspiring Web Developer"],
+      strings: ["Welcome to My Portfolio", "An Aspiring Web Developer"],
       typeSpeed: 70,
       backSpeed: 20,
-      loop: true
+      loop: true,
     });
 
-    
-  </script>
-  <script>
     function toggleMenu() {
       document.getElementById("navMenu").classList.toggle("show");
     }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-theme");
+    }
   </script>
-  <!-- AOS Animation Library JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+  <!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- EmailJS Init + Form Handler -->
 <script>
-  AOS.init({
-    duration: 1000, // animation duration
-    once: true,     // only animate once per element
+  emailjs.init("TvLSBIc5JL2LNjO80");
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_tt6uk9b", "template_cwhxf1f", form)
+        .then(() => {
+          Swal.fire({
+            icon: 'success',
+            title: 'Message Sent!',
+            text: '✅ Your message has been successfully sent.',
+            confirmButtonColor: '#4CAF50',
+            background: '#f0f9f5',
+            iconColor: '#4CAF50'
+          });
+          form.reset();
+        })
+        .catch((error) => {
+          console.error("EmailJS Error:", error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Sending Failed',
+            text: '❌ Could not send message. Please try again later.',
+            confirmButtonColor: '#e74c3c',
+            background: '#fff0f0',
+            iconColor: '#e74c3c'
+          });
+        });
+    });
   });
 </script>
 
-  
 
 </body>
+
 </html>
