@@ -154,3 +154,122 @@ gsap.to(".outer-card", {
   },
   y: -200
 });
+
+ emailjs.init("TvLSBIc5JL2LNjO80");
+
+const form = document.querySelector(".contact-form");
+
+const popup = document.getElementById("messagePopup");
+const popupText = popup.querySelector("span");
+const popupIcon = popup.querySelector("i");
+
+form.addEventListener("submit", function (e) {
+
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_tt6uk9b",
+    "template_cwhxf1f",
+    this
+  )
+
+  .then(() => {
+
+    /* SUCCESS */
+
+    popup.classList.remove("error");
+
+    popupIcon.className = "fa-solid fa-circle-check";
+
+    popupText.innerText = "Message Sent Successfully!";
+
+    popup.classList.add("show");
+
+    form.reset();
+
+    setTimeout(() => {
+      popup.classList.remove("show");
+    }, 3000);
+
+  })
+
+  .catch((error) => {
+
+    /* ERROR */
+
+    popup.classList.add("error");
+
+    popupIcon.className = "fa-solid fa-circle-xmark";
+
+    popupText.innerText = "Failed to send message!";
+
+    popup.classList.add("show");
+
+    console.log(error);
+
+    setTimeout(() => {
+      popup.classList.remove("show");
+    }, 3000);
+
+  });
+
+});
+
+  const contactSection = document.querySelector(".contact-section");
+const wrapper = document.querySelector(".contact-zoom-wrapper");
+
+window.addEventListener("scroll", () => {
+
+  const rect = wrapper.getBoundingClientRect();
+
+  const windowHeight = window.innerHeight;
+
+  // progress value
+  let progress = 1 - rect.top / windowHeight;
+
+  // limit between 0 and 1
+  progress = Math.max(0, Math.min(progress, 1));
+
+  // scale effect
+  const scale = 0.7 + progress * 0.3;
+
+  // opacity effect
+  const opacity = 0.4 + progress * 0.6;
+
+  contactSection.style.transform = `scale(${scale})`;
+  contactSection.style.opacity = opacity;
+
+});
+
+const glow = document.querySelector(".cursor-glow");
+const contact = document.querySelector(".contact-section");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let currentX = 0;
+let currentY = 0;
+
+contact.addEventListener("mousemove", (e) => {
+
+  const rect = contact.getBoundingClientRect();
+
+  mouseX = e.clientX - rect.left;
+  mouseY = e.clientY - rect.top;
+
+});
+
+/* smooth follow animation */
+
+function animateGlow() {
+
+  currentX += (mouseX - currentX) * 0.08;
+  currentY += (mouseY - currentY) * 0.08;
+
+  glow.style.left = currentX + "px";
+  glow.style.top = currentY + "px";
+
+  requestAnimationFrame(animateGlow);
+}
+
+animateGlow();
